@@ -1,0 +1,87 @@
+Traceback (most recent call last):
+  File "/home/raphael/.atom/packages/python-tools/lib/tools.py", line 84, in watch
+    self._process_request(data)
+  File "/home/raphael/.atom/packages/python-tools/lib/tools.py", line 65, in _process_request
+    self._write_response(self._serialize('usages', script.usages()))
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/api/__init__.py", line 490, in usages
+    names = usages.usages(self._evaluator, definitions, module)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/api/usages.py", line 32, in usages
+    result = evaluator.goto(name)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/__init__.py", line 369, in goto
+    types = self.eval_element(call)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/cache.py", line 41, in wrapper
+    rv = function(obj, *args, **kwargs)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/__init__.py", line 187, in eval_element
+    types = self.eval_trailer(types, trailer)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/__init__.py", line 257, in eval_trailer
+    new_types += self.find_types(typ, node)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/__init__.py", line 120, in find_types
+    return f.find(scopes, search_global)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/debug.py", line 52, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/finder.py", line 87, in find
+    types = self._names_to_types(names, search_global)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/finder.py", line 233, in _names_to_types
+    new_types = _name_to_types(self._evaluator, name, self.scope)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/cache.py", line 41, in wrapper
+    rv = function(obj, *args, **kwargs)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/finder.py", line 300, in _name_to_types
+    typ = typ.get_decorated_func()
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/cache.py", line 41, in wrapper
+    rv = function(obj, *args, **kwargs)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/representation.py", line 517, in get_decorated_func
+    dec_results = self._evaluator.eval_trailer(dec_results, trailer)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/__init__.py", line 259, in eval_trailer
+    new_types += self.execute(typ, node, trailer)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/debug.py", line 52, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/__init__.py", line 299, in execute
+    types = func(self, arguments)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/representation.py", line 102, in actual
+    return evaluator.execute(method, params)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/debug.py", line 52, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/__init__.py", line 299, in execute
+    types = func(self, arguments)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/representation.py", line 364, in py__call__
+    return Function.py__call__(self, evaluator, params)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/_compatibility.py", line 122, in <lambda>
+    return lambda *args, **kwargs: self.func(*args, **kwargs)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/representation.py", line 560, in py__call__
+    return FunctionExecution(evaluator, self, params).get_return_types()
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/cache.py", line 41, in wrapper
+    rv = function(obj, *args, **kwargs)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/recursion.py", line 100, in run
+    result = func(execution, **kwargs)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/representation.py", line 624, in get_return_types
+    types += self._evaluator.eval_element(r.children[1])
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/cache.py", line 41, in wrapper
+    rv = function(obj, *args, **kwargs)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/__init__.py", line 187, in eval_element
+    types = self.eval_trailer(types, trailer)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/__init__.py", line 259, in eval_trailer
+    new_types += self.execute(typ, node, trailer)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/debug.py", line 52, in wrapper
+    result = func(*args, **kwargs)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/__init__.py", line 299, in execute
+    types = func(self, arguments)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/_compatibility.py", line 124, in <lambda>
+    return lambda *args, **kwargs: self.func(obj, *args, **kwargs)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/representation.py", line 560, in py__call__
+    return FunctionExecution(evaluator, self, params).get_return_types()
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/representation.py", line 591, in __init__
+    new_func = helpers.deep_ast_copy(base.base_func, self, self._copy_dict)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/helpers.py", line 64, in deep_ast_copy
+    new_obj = copy_node(obj)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/helpers.py", line 38, in copy_node
+    new_child = copy_node(child)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/helpers.py", line 38, in copy_node
+    new_child = copy_node(child)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/helpers.py", line 38, in copy_node
+    new_child = copy_node(child)
+  File "/home/raphael/.atom/packages/python-tools/lib/jedi/evaluate/helpers.py", line 55, in copy_node
+    new_names_dict[string] = [new_elements[n] for n in names]
+KeyError: <Name: decorator@176,11>
+Input:
+{"type":"usages","path":"/home/raphael/Robot/tests_opencv/contours/contours.py","source":"import cv2 as cv\nimport numpy as np\nfrom bench_decorateur import benchmark\n\n@benchmark(\"PC\", \"img2/plan.jpg\")\ndef toLine(img):\n    img_ori = cv.equalizeHist(img_ori)\n\n    img_inutile, contours, hierarchy = cv.findContours(\n        cv.threshold(img_ori, 60, 255, cv.THRESH_BINARY_INV)[1],\n        cv.RETR_EXTERNAL,\n        cv.CHAIN_APPROX_SIMPLE\n    )\n    imageContours = np.zeros_like(img_ori)\n    imageContours = cv.drawContours(imageContours, contours, -1, 255, 1)\n    imageContours = cv.GaussianBlur(imageContours, (5, 5), 0)\n\n    # imageLigne = np.zeros_like(img_ori)\n    lines = cv.HoughLinesP(imageContours, 1, np.pi / 180, 180, 1, 150)\n\n    # for line in lines:\n    #     x1, y1, x2, y2 = line[0]\n    #     cv.line(imageLigne, (x1, y1), (x2, y2), 127, 4)\n\n    # return imageLigne\n","line":6,"col":11,"project_paths":["/home/raphael/Robot/tests_opencv/rectangle","/home/raphael/Robot/tests_opencv/contours"]}
+

@@ -1,0 +1,17 @@
+{
+    "controle": {
+        "servo": {
+            "camera": {
+                "X" : {
+                    "correction" : 0
+                },
+                "Y" : {
+                    "correction" : 120
+                }
+            },
+            "direction" : {
+                "correction" : -21
+            }
+        }
+    }
+}
