@@ -1,0 +1,88 @@
+@CHARSET"UTF-8";
+
+/****************************************************************/
+/*************************** GENERAL ****************************/
+/****************************************************************/
+.root {
+	-fx-background-color: red;
+	-fx-font-size: 15px;
+	-fx-padding: 10;
+}
+
+/****************************************************************/
+/**************** PANEL BOUTONS START/STOP STYLE ****************/
+/****************************************************************/
+
+.boutons-panel {
+	-fx-font-weight: bold;
+	-fx-alignment: center;
+	-fx-hgap: 6em;
+	-fx-vgap: 1em;
+}
+
+.boutons-panel .button {
+	-fx-font-size: 1.2em;
+	-fx-pref-width: 7em;
+	-fx-pref-height: 7em;
+	-fx-background-radius: 50%;
+	-fx-effect: dropshadow(gaussian , rgba(0, 0, 0, 0.5) , 10, 0, 0, 0);
+}
+
+.boutons-panel .button:hover {
+	-fx-text-fill: white;
+	-fx-cursor: hand;
+	-fx-effect: dropshadow(gaussian , rgba(0, 0, 0, 0.2) , 10, 0, 0, 0);
+}
+
+.btn-stop  { -fx-background-color: #ffa500; }
+.btn-start { -fx-background-color: #00FFFF; }
+.btn-stop:hover  { -fx-background-color: #996300; }
+.btn-start:hover { -fx-background-color: #009999; }
+
+
+/****************************************************************/
+/**************** PANEL BOUTONS START/STOP STYLE ****************/
+/****************************************************************/
+
+.top-pane {
+	-fx-background-image: url("car.png");
+    -fx-background-repeat: no-repeat; 
+    -fx-background-position: left top;
+    -fx-alignment: center-right;
+}
+
+.voyants-pane{
+	-fx-alignment: center;
+	-fx-pref-height: 12em;
+}
+
+.label-etat {
+	-fx-font-size: 1.5em;
+	-fx-padding: 1em 0.5em 1em 4.5em;
+    -fx-background-repeat: no-repeat; 
+    -fx-background-size: 4em 4em;
+    -fx-background-position: left center;
+}
+
+.label-etat.icon-bleu  { -fx-background-image: url("bleu.png");  }
+.label-etat.icon-rouge { -fx-background-image: url("rouge.png"); }
+.label-etat.icon-jaune { -fx-background-image: url("jaune.png"); }
+.label-etat.icon-vert  { -fx-background-image: url("vert.png");  }
+
+/************** Controle pad ******************/
+.controlepad {
+	-fx-background-image: url("double_fleche.png");
+    -fx-background-repeat: no-repeat; 
+    -fx-background-position: center center;
+	-fx-cursor: hand;
+}
+.controlepad_case {
+	-fx-background-color: rgba(255, 255, 255, 0);
+}
+.controlepad_case.hovered {
+	-fx-background-color: rgba(0, 0, 0, 0.25);
+}
+.controlepad_case.blocked {
+	-fx-background-color: rgba(0, 0, 0, 0.5);
+}
+

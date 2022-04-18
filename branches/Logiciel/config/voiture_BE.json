@@ -1,0 +1,33 @@
+{
+    "debug": {
+        "general": false,
+        "FPS": false,
+        "network": false,
+        "image": {
+            "angle_fct": false,
+            "analyse": false
+        }
+    },
+    "robot": {
+        "capture": {
+            "width": 160,
+            "height": 95
+        },
+    },
+    "controle": {
+        "servo": {
+            "camera": {
+                "X" : {
+                    "correction" : 0
+                },
+                 "Y" : {
+                    "initial" : 45,
+                    "correction" : 120
+                }
+            },
+            "direction" : {
+                "correction" : -21
+            }
+        }
+    }
+}

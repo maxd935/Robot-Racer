@@ -1,0 +1,27 @@
+{
+    "robot": {
+        "distance": 1.88,
+        "normal_sleep": 0.786
+    },
+    "image": {
+        "ROI": 0.3,
+        "min_angle": 15,
+        "min_shift": 35
+    },
+    "controle": {
+        "servo": {
+            "camera": {
+                "X" : {
+                    "correction" : 0
+                },
+                "Y" : {
+                    "initial" : 70,
+                    "correction" : 120
+                }
+            },
+            "direction" : {
+                "correction" : -21
+            }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+{
+    "debug": {
+        "general": true,
+        "FPS": true,
+        "controle": false,
+        "network": true,
+        "image": {
+            "surex": false,
+            "angle_fct": true,
+            "analyse": true,
+            "log": true
+        }
+    },
+    "network": {
+        "port": {
+            "stream": 45655,
+            "main": 12345
+        },
+        "wait_before_start": 0.5,
+        "controle": {
+            "angle": {
+                "petit": 25,
+                "grand": 45
+            }
+        },
+        "reboot_time": 5
+    },
+    "robot": {
+        "capture": {
+            "width": 120,
+            "height": 90
+        },
+        "device": "/dev/video0",
+        "wait_before_stop" : 0.6
+    },
+    "image": {
+        "height": 91,
+        "ROI": 0,
+        "jpg_quality": 10,
+        "seuil": {
+            "fin": 80,
+            "surex": 245,
+            "decision": 7
+        },
+        "prc_fin" : 0.03,
+        "min_angle": 47,
+        "min_shift": 30,
+        "short_sleep": 0.001,
+        "long_sleep": 0.01,
+        "padding": 2,
+        "angle_ajustement": 10
+    },
+    "controle": {
+        "pwm_frequence" : 50,
+        "servo": {
+            "periode_min": 160,
+            "periode_max" : 485,
+            "camera": {
+                "X" : {
+                    "channel" : 1,
+                    "min" : -90,
+                    "max" : 90,
+                    "initial" : 0,
+                    "correction" : -30
+                },
+                "Y" : {
+                    "channel" : 11,
+                    "min" : 40,
+                    "max" : 80,
+                    "initial" : 65,
+                    "correction" : 70
+                }
+            },
+            "direction" : {
+                "channel" : 13,
+                "min" : -45,
+                "max" : 45,
+                "initial" : 0,
+                "correction" : -30
+            }
+        },
+        "moteur" : {
+            "regime_courant" : 50,
+            "gauche" : {
+                "channel" : 7,
+                "pins" : [33, 37]
+            },
+            "droit" : {
+                "channel" : 3,
+                "pins" : [31, 35]
+            }
+        }
+    }
+}
